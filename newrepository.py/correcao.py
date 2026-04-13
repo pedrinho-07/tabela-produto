@@ -9,7 +9,7 @@ while True:
     resposta = (input("você quer adicionar algo mais? "))
     if resposta == 'sim':
         carrinhoadd = str(input('Digite o nome do produto: '))
-        qntdadd = int(input("adicione o valor deste item:"))
+        qntdadd = int(input("adicione o quantidade deste item:"))
         x += tabela [carrinhoadd] * qntdadd
         print("o valor total da compra é: {}".format(x))
     elif resposta == 'não':
