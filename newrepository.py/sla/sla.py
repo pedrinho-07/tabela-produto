@@ -18,16 +18,20 @@ print ("-=-" * 20)
 print ("vou pensar em um número entre 0 e 5. Tente adivinhar...")
 print ("-=-" * 20)
 while True:
+    try:
         jogador = int(input("Em que número eu pensei? "))
         print ("PROCESSANDO...")
-        sleep (2)
-        if jogador == computer:
-            print ('PARABÉNS! Você é melhor do que eu imaginei.')
-            break
-        elif jogador >5 or jogador <0 :
-            print ("Escolha de 0 a 5...")
-        else: 
-             print('Você perdeu!')
+    except ValueError:
+        print("Erro: digite apenas números.")
+        continue
+    sleep (2)
+    if jogador == computer:
+        print ('PARABÉNS! Você é melhor do que eu imaginei.')
+        break
+    elif jogador >5 or jogador <0 :
+        print ("Escolha de 0 a 5...")
+    else: 
+        print('Você perdeu!')
 
 while True:
     print("-=-"*20)
